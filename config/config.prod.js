@@ -9,7 +9,7 @@ exports.mysql = {
         // 用户名
         user: 'root',
         // 密码
-        password: 'chris916310',
+        password: 'root',
         // 数据库名
         database: 'test',
     },

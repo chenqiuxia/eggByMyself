@@ -25,7 +25,7 @@ module.exports = appInfo => {
             // 密码
             password: 'root',
             // 数据库名
-            database: 'test_1',
+            database: 'test',
         },
         // 是否加载到 app 上，默认开启
         app: true,
@@ -33,5 +33,14 @@ module.exports = appInfo => {
         agent: false,
     };
 
-  return config;
+    config.security = {
+        csrf: {
+            enable: false,
+            ignoreJSON: true
+        },
+        // 白名单
+        domainWhiteList: [ 'http://localhost:7001' ]
+    };
+
+    return config;
 };
